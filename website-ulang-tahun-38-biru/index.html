@@ -1,0 +1,558 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#091a2d">
+
+  <title>Untuk Lelaki Favoritku — 38</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tampilan halaman pembuka -->
+  <style>
+    .intro-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+      color: #f4f8ff;
+      background:
+        radial-gradient(
+          circle at 50% 35%,
+          rgba(91, 151, 207, 0.23),
+          transparent 38%
+        ),
+        linear-gradient(145deg, #102c49, #071321 75%);
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+
+    .intro-screen.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .intro-content {
+      width: 100%;
+      max-width: 520px;
+      animation: introAppear 1.2s ease both;
+    }
+
+    .intro-symbol {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 78px;
+      height: 78px;
+      margin-bottom: 28px;
+      border: 1px solid rgba(220, 237, 255, 0.5);
+      border-radius: 50%;
+      color: #d8eaff;
+      font-size: 32px;
+      box-shadow: 0 0 45px rgba(136, 190, 244, 0.15);
+    }
+
+    .intro-eyebrow {
+      margin-bottom: 18px;
+      color: #a9c9eb;
+      font-size: 10px;
+      letter-spacing: 4px;
+    }
+
+    .intro-title {
+      margin: 0 0 20px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 8vw, 64px);
+      font-weight: 500;
+      line-height: 1.15;
+    }
+
+    .intro-title em {
+      color: #a9c9eb;
+      font-weight: 500;
+    }
+
+    .intro-description {
+      max-width: 360px;
+      margin: 0 auto 34px;
+      color: #c0cede;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .intro-button {
+      padding: 16px 26px;
+      border: 1px solid #dcecff;
+      border-radius: 2px;
+      color: #10243a;
+      background: #e5f1ff;
+      font-family: "DM Sans", sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .intro-button:hover {
+      transform: translateY(-3px);
+      background: #ffffff;
+    }
+
+    .intro-note {
+      margin-top: 22px;
+      color: #839bb6;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    body.intro-open {
+      overflow: hidden;
+    }
+
+    @keyframes introAppear {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .intro-screen,
+      .intro-content,
+      .intro-button {
+        animation: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="intro-open">
+
+  <!-- HALAMAN PEMBUKA KEJUTAN -->
+  <div class="intro-screen" id="introScreen">
+    <div class="intro-content">
+
+      <div class="intro-symbol">♡</div>
+
+      <p class="intro-eyebrow">
+        A LITTLE SURPRISE FOR YOU
+      </p>
+
+      <h1 class="intro-title">
+        Untuk lelaki<br>
+        <em>favoritku.</em>
+      </h1>
+
+      <p class="intro-description">
+        Ada satu halaman kecil yang kubuat khusus untukmu.
+        Isinya mungkin sederhana, tapi setiap katanya
+        datang dari hati.
+      </p>
+
+      <button class="intro-button" id="openSurprise">
+        BUKA KEJUTAN &nbsp; ♡
+      </button>
+
+      <p class="intro-note">
+        MADE WITH LOVE · YOUR 38TH CHAPTER
+      </p>
+
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="topbar">
+    <a class="brand" href="#home">
+      <span>38</span> OUR LITTLE UNIVERSE
+    </a>
+
+    <button id="musicToggle" type="button">
+      ♫ <b id="musicLabel">PUTAR MUSIK</b>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+      <div class="orb orb1"></div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">
+          ✦ &nbsp; A CELEBRATION OF YOU
+        </p>
+
+        <h1>
+          Untuk lelaki<br>
+          favoritku<span>.</span>
+        </h1>
+
+        <p class="sub">
+          Hari ini, semesta punya alasan lebih untuk bersinar.
+        </p>
+
+        <div class="age">
+          <strong>38</strong>
+
+          <div>
+            <b>TAHUN</b>
+            <small>dan masih jadi rumah ternyaman</small>
+          </div>
+        </div>
+
+        <a class="scroll" href="#letter">
+          SCROLL UNTUK SEBUAH PESAN &nbsp; ↓
+        </a>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-photo photo">
+          <img
+            src="utama.jpg"
+            alt="Foto kalian berdua"
+            onerror="this.style.display='none';this.parentElement.classList.add('placeholder')"
+          >
+
+          <div class="placeholder-text">
+            FOTO KALIAN
+            <small>ganti dengan momen favorit</small>
+          </div>
+
+          <label>my favorite person ♡</label>
+        </div>
+
+        <div class="floating">
+          to my<br>
+          <i>always</i>
+        </div>
+
+        <span class="spark">✧</span>
+      </div>
+
+      <div class="hero-foot">
+        <span>MADE FOR YOUR SPECIAL DAY</span>
+        <span>WITH LOVE · 01/04</span>
+      </div>
+
+    </section>
+
+    <!-- SURAT CINTA -->
+    <section class="letter section" id="letter">
+      <div class="index">01 / A NOTE FOR YOU</div>
+
+      <div class="two-col">
+        <h2>
+          Kalau aku bisa<br>
+          memilih lagi,<br>
+          <em>aku tetap memilihmu.</em>
+        </h2>
+
+        <div class="copy">
+          <p class="salute">
+            Untuk kamu, orang yang selalu punya tempat paling
+            istimewa di hatiku,
+          </p>
+
+          <p>
+            Selamat ulang tahun yang ke-38, sayang.
+            Hari ini bukan cuma tentang bertambahnya usia,
+            tapi juga tentang semua hal baik yang sudah kamu
+            lewati, semua mimpi yang sedang kamu perjuangkan,
+            dan semua kebaikan yang masih menunggumu di depan.
+          </p>
+
+          <p>
+            Aku mungkin nggak selalu pandai merangkai kata,
+            tapi aku ingin kamu tahu: kehadiranmu adalah salah
+            satu hal paling indah dalam hidupku. Semoga di usia
+            baru ini, hatimu selalu tenang, langkahmu dimudahkan,
+            dan kamu nggak pernah merasa harus menghadapi
+            semuanya sendirian.
+          </p>
+
+          <p class="sign">
+            Dengan cinta, selalu. <b>♥</b>
+          </p>
+        </div>
+      </div>
+    </section>
+
+<!-- VIDEO SURPRISE ULANG TAHUN -->
+<section class="video-surprise section" id="birthday-video">
+
+  <div class="index">02 / A MOMENT JUST FOR YOU</div>
+
+  <div class="video-heading">
+    <p class="eyebrow">PRESS PLAY, MY LOVE ♡</p>
+
+    <h2>
+      Ada sesuatu<br>
+      <em>yang ingin kamu lihat.</em>
+    </h2>
+
+    <p class="video-description">
+      Beberapa detik yang mungkin sederhana,
+      tapi dibuat dengan banyak cinta khusus untukmu.
+    </p>
+  </div>
+
+  <div class="video-frame">
+    <div class="video-topline">
+      <span>A LITTLE SURPRISE</span>
+      <span>♡ 38</span>
+    </div>
+
+    <video
+      id="birthdayVideo"
+      controls
+      playsinline
+      preload="metadata"
+      poster="assets/foto/foto-utama.jpg"
+    >
+      <source
+        src="2.mp4"
+        type="video/mp4"
+      >
+      Browser kamu belum mendukung pemutaran video.
+    </video>
+
+    <div class="video-bottomline">
+      <span>MADE WITH LOVE</span>
+      <span>YOUR SPECIAL DAY · 38</span>
+    </div>
+  </div>
+
+  <p class="video-caption">
+    “Semoga setiap kali kamu mengingat hari ini,
+    kamu juga ingat betapa berharganya dirimu.”
+  </p>
+
+</section>
+
+    <!-- GALERI FOTO -->
+    <section class="gallery-section section" id="moments">
+
+      <div class="section-head">
+        <div>
+          <div class="index">02 / OUR MOMENTS</div>
+
+          <h2>
+            Hal-hal kecil,<br>
+            <em>yang berarti besar.</em>
+          </h2>
+        </div>
+
+        <p>
+          Beberapa potongan cerita kita yang ingin kusimpan
+          lama-lama.
+        </p>
+      </div>
+
+      <div class="gallery">
+
+        <button
+          class="gallery-card tall"
+          type="button"
+          data-photo="1.jpg"
+          data-caption="Momen yang selalu ingin kuulang."
+        >
+          <img
+            src="1.jpg"
+            alt="Kenangan bersama 1"
+            onerror="this.style.display='none';this.parentElement.classList.add('empty')"
+          >
+
+          <small>01 · YOUR FAVORITE MEMORY</small>
+          <span>momen yang ingin kuulang ↗</span>
+        </button>
+
+        <button
+          class="gallery-card offset"
+          type="button"
+          data-photo="3.jpg"
+          data-caption="Di dekatmu, hal sederhana terasa istimewa."
+        >
+          <img
+            src="3.jpg"
+            alt="Kenangan bersama 2"
+            onerror="this.style.display='none';this.parentElement.classList.add('empty')"
+          >
+
+          <small>02 · JUST US</small>
+          <span>sesederhana bersama ↗</span>
+        </button>
+
+        <button
+          class="gallery-card wide"
+          type="button"
+          data-photo="4.jpg"
+          data-caption="Semoga masih banyak cerita yang kita tulis bersama."
+        >
+          <img
+            src="4.jpg"
+            alt="Kenangan bersama 3"
+            onerror="this.style.display='none';this.parentElement.classList.add('empty')"
+          >
+
+          <small>03 · MORE TO COME</small>
+          <span>cerita kita belum selesai ↗</span>
+        </button>
+
+      </div>
+
+      <p class="hint">
+        Ganti foto dengan foto kalian sendiri di folder
+        <code>assets/foto</code>.
+      </p>
+
+    </section>
+
+    <!-- DOA DAN HARAPAN -->
+    <section class="wishes section">
+
+      <div class="index">03 / WHAT I WISH FOR YOU</div>
+
+      <h2>
+        Di usia ke-38 ini,<br>
+        <em>semoga kamu...</em>
+      </h2>
+
+      <div class="wish-list">
+
+        <div>
+          <span>01</span>
+          <p>
+            selalu sehat, panjang umur, dan dikelilingi
+            orang-orang yang tulus menyayangimu.
+          </p>
+          <b>✦</b>
+        </div>
+
+        <div>
+          <span>02</span>
+          <p>
+            diberi kelapangan hati, rezeki yang baik,
+            dan keberanian untuk mengejar semua impianmu.
+          </p>
+          <b>✦</b>
+        </div>
+
+        <div>
+          <span>03</span>
+          <p>
+            menemukan kebahagiaan di hal-hal sederhana,
+            dan selalu punya alasan untuk tersenyum.
+          </p>
+          <b>✦</b>
+        </div>
+
+        <div>
+          <span>04</span>
+          <p>
+            tahu bahwa ada seseorang yang akan terus mendoakan
+            dan mendukungmu, hari ini dan seterusnya.
+          </p>
+          <b>♡</b>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PESAN TERAKHIR -->
+    <section class="finale">
+
+      <div class="stars">
+        ✦　　✧　　　 ✦　　　✧
+      </div>
+
+      <p class="eyebrow center">ONE LAST THING</p>
+
+      <h2>
+        My favorite chapter<br>
+        is the one <em>with you.</em>
+      </h2>
+
+      <p class="final-copy">
+        Kalau nanti dunia terasa berat, semoga kamu ingat:
+        kamu dicintai, kamu berharga, dan kamu nggak harus
+        menjadi sempurna untuk pantas bahagia.
+      </p>
+
+      <button
+        id="surpriseBtn"
+        class="surprise-btn"
+        type="button"
+      >
+        BUKA PESAN KECIL &nbsp; ↗
+      </button>
+
+      <div id="surpriseMessage" class="hidden-message" hidden>
+        <hr>
+
+        <p>
+          Selamat ulang tahun, cintaku. Terima kasih sudah
+          menjadi dirimu. Semoga langkah kita ke depan
+          dipenuhi banyak hal baik, dan semoga suatu hari
+          nanti kita melihat kembali halaman ini sambil
+          tersenyum karena begitu banyak doa yang sudah
+          menjadi nyata. Aku sayang kamu. 🤍
+        </p>
+
+        <small>— WITH ALL MY HEART</small>
+      </div>
+
+      <div class="endline">
+        YOU, ME &amp; ALL THE DAYS AHEAD ♡
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>MADE FOR YOUR 38TH CHAPTER</span>
+    <span>WITH LOVE, ALWAYS ♡</span>
+  </footer>
+
+  <!-- LIGHTBOX FOTO -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button id="lightboxClose" type="button" aria-label="Tutup">
+      ×
+    </button>
+
+    <img id="lightboxImg" alt="Foto kenangan">
+
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <!-- FILE MUSIK -->
+  <audio id="music" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
